@@ -1,6 +1,5 @@
 package com.petprojects.todo.model;
 
-import com.petprojects.todo.config.TaskStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

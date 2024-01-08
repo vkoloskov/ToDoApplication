@@ -1,11 +1,10 @@
 package com.petprojects.todo.controller;
 
-import com.petprojects.todo.config.TaskStatus;
+import com.petprojects.todo.model.TaskStatus;
 import com.petprojects.todo.model.Task;
 import com.petprojects.todo.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.connector.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
