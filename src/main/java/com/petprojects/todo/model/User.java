@@ -1,6 +1,10 @@
 package com.petprojects.todo.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.IdGeneratorType;
@@ -9,11 +13,11 @@ import java.util.List;
 
 @Entity
 @Table(name = "user_app")
-public class User {
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private Long id;
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class User extends GenericModel{
     @Column(name = "email")
     private String email;
     @Column(name = "password")
