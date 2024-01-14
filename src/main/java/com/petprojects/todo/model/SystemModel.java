@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass
-public class SystemModel extends GenericModel{
+public abstract class SystemModel extends GenericModel{
     @Column(name = "deleted_at")
     private LocalDateTime deletedAt;
     @Column(name = "deleted_by")
