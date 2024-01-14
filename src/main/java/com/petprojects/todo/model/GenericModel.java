@@ -29,6 +29,4 @@ public abstract class GenericModel {
     private String createdBy;
     @Column(name = "updated_by")
     private String updatedBy;
-    @Column(name = "is_deleted")
-    private Boolean isDeleted;
 }

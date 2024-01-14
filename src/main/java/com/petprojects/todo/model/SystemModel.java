@@ -19,4 +19,6 @@ public class SystemModel extends GenericModel{
     private LocalDateTime deletedAt;
     @Column(name = "deleted_by")
     private String deletedBy;
+    @Column(name = "is_deleted")
+    private Boolean isDeleted;
 }
