@@ -23,7 +23,7 @@ public class TaskController {
     }
     @PostMapping ("/add")
     public ResponseEntity addTask(@RequestBody @Valid Task task) {
-        task.setStatus(TaskStatus.NEW);
+        task.setStatus(new TaskStatus("New"));
         task.setCreatedAt(LocalDateTime.now());
         task.setUpdatedAt(task.getCreatedAt());
         taskService.save(task);

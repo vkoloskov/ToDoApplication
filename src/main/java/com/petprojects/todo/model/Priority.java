@@ -13,8 +13,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "task_statuses")
-public class TaskStatus extends SystemModel{
-    @Column(name = "status_name")
+@Table(name = "priorities")
+public class Priority extends GenericModel{
+    @Column(name = "name", nullable = false)
     private String name;
+    @Column(name = "level", nullable = false)
+    private Integer level;
 }
