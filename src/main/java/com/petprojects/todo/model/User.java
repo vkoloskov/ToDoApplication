@@ -11,17 +11,17 @@ import org.hibernate.annotations.FetchMode;
 import java.util.List;
 
 @Entity
-@Table(name = "app_users")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User extends GenericModel{
-    @Column(name = "email")
+@Table(name = "app_users")
+public class User extends SystemModel {
+    @Column(name = "email", nullable = false)
     private String email;
     @Column(name = "login", nullable = false)
     private String login;
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
     @ElementCollection(fetch = FetchType.EAGER)
     @Fetch(value = FetchMode.SUBSELECT)
@@ -29,6 +29,6 @@ public class User extends GenericModel{
     @OneToMany(mappedBy="assignTo")
     private List<Task> tasks;
     @OneToMany
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "role_id", nullable = false)
     private List<Role> roles;
 }

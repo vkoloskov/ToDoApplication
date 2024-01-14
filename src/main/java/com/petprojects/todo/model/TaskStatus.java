@@ -9,13 +9,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "task_statuses")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TaskStatus extends GenericModel{
+@Table(name = "task_statuses")
+public class TaskStatus extends SystemModel{
     @Column(name = "status_name")
     private String name;
-
 }

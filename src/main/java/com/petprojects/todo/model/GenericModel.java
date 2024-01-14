@@ -21,16 +21,14 @@ public abstract class GenericModel {
     @Column(name = "id")
     @GeneratedValue()
     private Long id;
-    @Column(name = "created_at")
+    @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
-    @Column(name = "created_by")
+    @Column(name = "created_by", nullable = false)
     private String createdBy;
     @Column(name = "updated_by")
     private String updatedBy;
-    @Column(name = "deleted_at")
-    private LocalDateTime deletedAt;
-    @Column(name = "deleted_by")
-    private String deletedBy;
+    @Column(name = "is_deleted")
+    private Boolean isDeleted;
 }

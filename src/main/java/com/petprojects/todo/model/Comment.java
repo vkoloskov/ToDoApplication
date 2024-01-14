@@ -8,15 +8,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "comments")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "comments")
 public class Comment extends GenericModel {
-    @Column(name = "content")
+    @Column(name = "content", nullable = false)
     private String content;
     @ManyToOne
-    @JoinColumn(name="task_id")
+    @JoinColumn(name="task_id", nullable = false)
     private Task task;
 }

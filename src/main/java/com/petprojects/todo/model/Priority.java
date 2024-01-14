@@ -9,14 +9,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "priorities")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "priorities")
 public class Priority extends GenericModel{
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "level")
+    @Column(name = "level", nullable = false)
     private Integer level;
 }

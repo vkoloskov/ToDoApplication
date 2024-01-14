@@ -10,18 +10,18 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "tasks")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "tasks")
 public class Task extends GenericModel{
-    @Column(name = "title")
+    @Column(name = "title", nullable = false)
     private String title;
     @Column(name = "description")
     private String description;
     @ManyToOne
-    @JoinColumn(name = "status_id")
+    @JoinColumn(name = "status_id", nullable = false)
     private TaskStatus status;
     @Column(name = "completed_at")
     private LocalDateTime completedAt;

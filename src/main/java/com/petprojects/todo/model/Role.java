@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "roles")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Role extends GenericModel {
-    @Column(name = "name")
+@Table(name = "roles")
+public class Role extends SystemModel {
+    @Column(name = "name", nullable = false)
     private String name;
     @Column(name = "description")
     private String description;
