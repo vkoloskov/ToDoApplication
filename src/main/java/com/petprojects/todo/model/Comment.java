@@ -16,7 +16,4 @@ import lombok.Setter;
 public class Comment extends GenericModel {
     @Column(name = "content", nullable = false)
     private String content;
-    @ManyToOne
-    @JoinColumn(name="task_id", nullable = false)
-    private Task task;
 }

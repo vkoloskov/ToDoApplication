@@ -34,4 +34,7 @@ public class Task extends GenericModel{
     @OneToMany
     @JoinColumn(name = "follower_id")
     private List<User> followers;
+    @OneToMany
+    @JoinColumn(name = "comment_id")
+    private List<Comment> comments;
 }
