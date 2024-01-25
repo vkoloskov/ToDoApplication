@@ -19,14 +19,14 @@ public class TaskController {
 
     @GetMapping("")
     ResponseEntity getAllTasks() {
-        return ResponseEntity.ok(taskService.getAll());
+        return ResponseEntity.ok(taskService.listAll());
     }
     @PostMapping ("/add")
     public ResponseEntity addTask(@RequestBody @Valid Task task) {
         task.setStatus(new TaskStatus("New"));
         task.setCreatedAt(LocalDateTime.now());
         task.setUpdatedAt(task.getCreatedAt());
-        taskService.save(task);
+        taskService.update(task);
         return ResponseEntity.ok(task);
     }
 

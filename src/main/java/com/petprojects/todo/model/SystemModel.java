@@ -20,5 +20,5 @@ public abstract class SystemModel extends GenericModel{
     @Column(name = "deleted_by")
     private String deletedBy;
     @Column(name = "is_deleted")
-    private Boolean isDeleted;
+    private boolean isDeleted;
 }
